@@ -32,53 +32,6 @@ export function HeroSection() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-          <div className="card-strong">
-            <h2 className="text-lg font-semibold text-coffee-roast">Coffee Mood</h2>
-            <p className="mt-2 text-sm text-coffee-brown/80">
-              Pick a mood and we’ll suggest a cup that matches how you want to feel.
-            </p>
-            <div className="mt-4 grid grid-cols-2 gap-3">
-              {[
-                { emoji: "💼", label: "Work", hint: "Focus blend" },
-                { emoji: "🛋️", label: "Relax", hint: "Chill roast" },
-                { emoji: "📚", label: "Study", hint: "Bright pick" },
-                { emoji: "🌙", label: "Night", hint: "Easy sipper" },
-              ].map((mood) => (
-                <button
-                  key={mood.label}
-                  type="button"
-                  className="flex flex-col items-start gap-1 rounded-2xl border border-white/20 bg-white/50 px-4 py-4 text-left shadow-sm transition hover:bg-white"
-                >
-                  <span className="text-xl">{mood.emoji}</span>
-                  <span className="font-semibold text-coffee-roast">{mood.label}</span>
-                  <span className="text-xs text-coffee-brown/70">{mood.hint}</span>
-                </button>
-              ))}
-            </div>
-          </div>
-
-          <div className="card-strong">
-            <h2 className="text-lg font-semibold text-coffee-roast">Quick Brew Timer</h2>
-            <p className="mt-2 text-sm text-coffee-brown/80">
-              Start a guided timer for your next brew. Perfect pours, every cup.
-            </p>
-            <div className="mt-6 flex items-center justify-between gap-4">
-              <div>
-                <p className="text-xs uppercase tracking-wide text-coffee-brown/70">
-                  French Press
-                </p>
-                <p className="text-2xl font-semibold text-coffee-roast">4:00</p>
-              </div>
-              <button
-                type="button"
-                className="rounded-full bg-coffee-brown px-5 py-3 text-sm font-semibold text-coffee-cream shadow-sm transition hover:bg-coffee-roast"
-              >
-                Start
-              </button>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
