@@ -136,6 +136,12 @@ export function FlavorQuiz() {
               transition={{ duration: 0.35 }}
               className="card-dark space-y-4"
             >
+              <div className="absolute top-0 right-0 p-4 opacity-10 pointer-events-none select-none">
+                <div className="grid grid-cols-2 gap-2 text-2xl animate-float">
+                  <span>☕</span> <span>🍃</span>
+                  <span>✨</span> <span>📦</span>
+                </div>
+              </div>
               <div>
                 <p className="text-xs uppercase tracking-widest text-white/40 font-semibold">
                   Your Match

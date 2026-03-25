@@ -8,7 +8,6 @@ import { useState } from "react";
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/shop", label: "Shop" },
   { href: "/personalizer", label: "Personalizer" },
   { href: "/brew-guide", label: "Brew Guide" },
   { href: "/subscription", label: "Subscription" },
@@ -65,24 +64,7 @@ export function SiteHeader() {
 
         {/* Right actions */}
         <div className="flex items-center gap-2">
-          {/* Cart button */}
-          <Link
-            href="/shop"
-            className="relative inline-flex items-center gap-2 rounded-full border border-coffee-brown/25 bg-white/70 px-4 py-2 text-sm font-semibold text-coffee-roast shadow-sm transition hover:bg-white hover:shadow-md"
-          >
-            <span className="text-base">🛒</span>
-            <span className="hidden sm:inline">Cart</span>
-            {cartCount > 0 ? (
-              <motion.span
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                className="absolute -right-2 -top-2 flex h-5 w-5 items-center justify-center rounded-full bg-coffee-brown text-[10px] font-bold text-coffee-cream"
-              >
-                {cartCount}
-              </motion.span>
-            ) : null}
-          </Link>
-
+        <div className="flex items-center gap-2">
           {/* Mobile menu toggle */}
           <button
             type="button"
@@ -92,6 +74,7 @@ export function SiteHeader() {
           >
             <span className="text-base">{mobileOpen ? "✕" : "☰"}</span>
           </button>
+        </div>
         </div>
       </div>
 

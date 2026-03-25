@@ -1,3 +1,4 @@
+import { AboutCafe } from "@/components/home/AboutCafe";
 import { BrewGuidePreview } from "@/components/home/BrewGuidePreview";
 import { BrewOfTheDay } from "@/components/home/BrewOfTheDay";
 import { FeaturedProducts } from "@/components/home/FeaturedProducts";
@@ -9,6 +10,7 @@ export default function Home() {
   return (
     <main className="bg-coffee-latte">
       <HeroSection />
+      <AboutCafe />
       <FeaturedProducts />
       <BrewOfTheDay />
       <ReviewsCarousel />

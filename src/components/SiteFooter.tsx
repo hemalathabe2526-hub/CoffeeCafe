@@ -14,7 +14,6 @@ const footerLinks = {
     { label: "Returns", href: "#" },
   ],
   Explore: [
-    { label: "Shop", href: "/shop" },
     { label: "Brew Guide", href: "/brew-guide" },
     { label: "Subscription", href: "/subscription" },
     { label: "Store Locator", href: "/locator" },
