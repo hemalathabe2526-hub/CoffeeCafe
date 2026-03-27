@@ -1,19 +1,19 @@
 export function StoreLocator() {
   const locations = [
     {
-      name: "Starbucks – Fifth Avenue",
+      name: "BrewBean – Fifth Avenue",
       address: "1024 5th Ave, New York, NY 10028",
       hours: "Daily 6am–10pm",
       phone: "(212) 555-0199",
     },
     {
-      name: "Starbucks – Times Square",
+      name: "BrewBean – Times Square",
       address: "1501 Broadway, New York, NY 10036",
       hours: "Daily 5am–12am",
       phone: "(212) 555-0123",
     },
     {
-      name: "Starbucks – Grand Central",
+      name: "BrewBean – Grand Central",
       address: "89 E 42nd St, New York, NY 10017",
       hours: "Daily 5:30am–11pm",
       phone: "(212) 555-0145",
@@ -26,10 +26,10 @@ export function StoreLocator() {
         <div className="space-y-3">
           <span className="section-label">📍 Find Us</span>
           <h1 className="text-3xl font-display font-semibold text-coffee-roast">
-            Starbucks Store Locator
+            BrewBean Store Locator
           </h1>
           <p className="mt-2 max-w-xl text-sm text-coffee-brown/80">
-            Find the closest Starbucks coffee house and get your favorite brew.
+            Find the closest BrewBean coffee house and get your favorite brew.
           </p>
         </div>
       </div>
@@ -38,8 +38,8 @@ export function StoreLocator() {
         <div className="col-span-2 rounded-2xl border border-white/25 bg-white/70 p-6 shadow-soft backdrop-blur">
           <div className="aspect-[16/9] w-full overflow-hidden rounded-xl bg-coffee-latte">
             <iframe
-              title="Starbucks Map"
-              src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d48348.06734190806!2d-74.00898564035645!3d40.751659972304914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sstarbucks!5e0!3m2!1sen!2sus!4v1711354000000!5m2!1sen!2sus"
+              title="BrewBean Map"
+              src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d48348.06734190806!2d-74.00898564035645!3d40.751659972304914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1scoffee!5e0!3m2!1sen!2sus!4v1711354000000!5m2!1sen!2sus"
               width="100%"
               height="100%"
               className="border-0 grayscale contrast-[1.1] invert-[0.05]"

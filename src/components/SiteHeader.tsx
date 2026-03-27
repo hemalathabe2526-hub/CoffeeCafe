@@ -65,6 +65,17 @@ export function SiteHeader() {
         {/* Right actions */}
         <div className="flex items-center gap-2">
         <div className="flex items-center gap-2">
+          <Link
+            href="/cart"
+            className="flex items-center gap-1.5 rounded-full border border-coffee-brown/20 bg-white/60 px-3 py-1.5 text-sm font-semibold text-coffee-roast transition hover:bg-white"
+          >
+            🛒
+            {cartCount > 0 && (
+              <span className="flex h-5 w-5 items-center justify-center rounded-full bg-coffee-roast text-[10px] font-bold text-coffee-cream">
+                {cartCount}
+              </span>
+            )}
+          </Link>
           {/* Mobile menu toggle */}
           <button
             type="button"

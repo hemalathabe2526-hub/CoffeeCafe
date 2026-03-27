@@ -8,7 +8,7 @@ const roastOptions: RoastLevel[] = ["Light", "Medium", "Dark"];
 
 export default function ShopPage() {
   const [roastFilter, setRoastFilter] = useState<RoastLevel | "All">("All");
-  const [maxPrice, setMaxPrice] = useState(30);
+  const [maxPrice, setMaxPrice] = useState(1000);
   const [search, setSearch] = useState("");
 
   const filteredCoffees = useMemo(() => {
@@ -59,14 +59,14 @@ export default function ShopPage() {
               <span className="text-sm text-coffee-brown/70">Up to</span>
               <input
                 type="range"
-                min={10}
-                max={30}
-                step={1}
+                min={300}
+                max={1000}
+                step={50}
                 value={maxPrice}
                 onChange={(event) => setMaxPrice(Number(event.target.value))}
                 className="h-2 w-32 cursor-pointer accent-coffee-brown"
               />
-              <span className="text-sm font-semibold text-coffee-roast">${maxPrice}</span>
+              <span className="text-sm font-semibold text-coffee-roast">₹{maxPrice}</span>
             </div>
           </div>
         </div>

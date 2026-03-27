@@ -44,7 +44,7 @@ export function HeroSection() {
             >
               <span className="inline-flex items-center gap-2 rounded-full bg-white/10 border border-white/20 px-4 py-2 text-xs font-semibold text-white/80 backdrop-blur">
                 <span className="pulse-dot" />
-                Freshly roasted this week · Free shipping over $45
+                Freshly roasted this week · Free shipping over ₹3000
               </span>
             </motion.div>
 

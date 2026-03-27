@@ -6,21 +6,21 @@ const plans = [
   {
     id: "starter",
     name: "Starter",
-    price: 14,
+    price: 450,
     description: "A weekly pick-me-up with our most popular roast.",
     perks: ["2 bags per month", "Free shipping", "Easy swap"],
   },
   {
     id: "lover",
     name: "Coffee Lover",
-    price: 22,
+    price: 680,
     description: "A curated selection for those who savor every cup.",
     perks: ["4 bags per month", "Exclusive blends", "Priority roasting"],
   },
   {
     id: "premium",
     name: "Premium Roaster Choice",
-    price: 35,
+    price: 890,
     description: "Our top picks, roasted fresh and delivered with care.",
     perks: ["5 bags per month", "Roaster's choice", "Gift extras"],
   },
@@ -68,7 +68,7 @@ export function SubscriptionPlans() {
           >
             <div className="flex items-center justify-between">
               <h2 className="text-lg font-semibold text-coffee-roast">{planOption.name}</h2>
-              <span className="text-xl font-bold text-coffee-brown">${planOption.price}</span>
+              <span className="text-xl font-bold text-coffee-brown">₹{planOption.price}</span>
             </div>
             <p className="mt-2 text-sm text-coffee-brown/80">{planOption.description}</p>
             <ul className="mt-4 space-y-2 text-sm text-coffee-brown/70">
@@ -159,7 +159,7 @@ export function SubscriptionPlans() {
             </p>
           </div>
           <div className="text-right">
-            <div className="text-2xl font-bold text-coffee-roast">${plan.price}</div>
+            <div className="text-2xl font-bold text-coffee-roast">₹{plan.price}</div>
             <div className="text-sm text-coffee-brown/70">per shipment</div>
           </div>
         </div>
