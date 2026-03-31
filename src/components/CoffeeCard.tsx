@@ -8,6 +8,7 @@ import type { CoffeeProduct } from "@/data/coffees";
 import { useCart } from "@/context/cart";
 import { formatCurrency, daysSince, formatDaysAgo } from "@/lib/utils";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 export function CoffeeCard({
   coffee,
@@ -20,6 +21,7 @@ export function CoffeeCard({
 }) {
   const { dispatch } = useCart();
   const router = useRouter();
+  const [added, setAdded] = useState(false);
   const freshDays = useMemo(() => daysSince(coffee.roastDate), [coffee.roastDate]);
 
   return (
@@ -70,31 +72,39 @@ export function CoffeeCard({
           </div>
         ) : null}
 
-        <div className="mt-auto pt-4 flex items-center justify-between">
+          <div className="mt-auto pt-4 flex items-center justify-between">
           <div>
             <div className="text-sm font-medium text-coffee-roast">
               {formatCurrency(coffee.price)}
             </div>
             <div className="text-xs text-coffee-brown/60">{coffee.origin}</div>
           </div>
-          <button
-            type="button"
-            onClick={() => {
-              dispatch({
-                type: "add",
-                item: {
-                  id: coffee.id,
-                  name: coffee.name,
-                  price: coffee.price,
-                  image: coffee.image,
-                },
-              });
-              router.push("/cart");
-            }}
-            className="inline-flex items-center gap-2 rounded-full bg-coffee-brown px-4 py-2 text-sm font-semibold text-coffee-cream shadow-sm transition hover:bg-coffee-roast"
-          >
-            Add to cart
-          </button>
+          <div className="flex flex-col items-end gap-1">
+            {added && (
+              <span className="text-[11px] font-semibold text-green-700 animate-pulse">
+                ✓ Added!
+              </span>
+            )}
+            <button
+              type="button"
+              onClick={() => {
+                dispatch({
+                  type: "add",
+                  item: {
+                    id: coffee.id,
+                    name: coffee.name,
+                    price: coffee.price,
+                    image: coffee.image,
+                  },
+                });
+                setAdded(true);
+                setTimeout(() => setAdded(false), 1500);
+              }}
+              className="inline-flex items-center gap-2 rounded-full bg-coffee-brown px-4 py-2 text-sm font-semibold text-coffee-cream shadow-sm transition hover:bg-coffee-roast"
+            >
+              {added ? "Added ✓" : "Add to cart"}
+            </button>
+          </div>
         </div>
       </div>
     </motion.article>
