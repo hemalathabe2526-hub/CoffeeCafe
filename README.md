@@ -116,7 +116,7 @@ npm run lint
 ## 🌐 Deployment
 
 This project is deployed on **Vercel**. You can view the live site at:  
-👉 **[coffee-project-hemalathabe2526-1449s-projects.vercel.app](https://coffee-project-5pxgym5fv-hemalathabe2526-1449s-projects.vercel.app)**
+👉 **https://coffee-project-delta-one.vercel.app/**
 
 ---
 
